@@ -24,30 +24,30 @@ const Future = () => {
           </p>
           <div className="flex mt-10">
             <div className="flex">
-              <div className="w-[10%]">
+              <div className="w-[15%]">
                 <img src={img4} alt="" className="mr-2" />
               </div>
 
-              <div className="w-[90%]">
+              <div className="w-[85%]">
                 {" "}
-                <h6 className="text-sm text-black font-sans">
+                <h6 className="text-base text-black font-sans">
                   Professional Degree
                 </h6>
-                <p className="text-xs  font-light">
+                <p className="text-sm  font-light">
                   Professional degrees are degrees recognized by the US
                   Department of Education as necessary for subsequent licensing.
                 </p>
               </div>
             </div>
             <div className="flex">
-              <div className="w-[10%]">
+              <div className="w-[15%]">
                 <img src={img3} alt="" className="mr-2" />
               </div>
-              <div className="w-[90%]">
-                <h6 className="text-sm text-black font-sans">
+              <div className="w-[85%]">
+                <h6 className="text-base text-black font-sans">
                   The Best Online Courses
                 </h6>
-                <p className="text-xs  font-light">
+                <p className="text-sm  font-light">
                   Find Courses and Specializations from top universities like
                   Yale, Michigan, Stanford, and leading companies like Google
                   and IBM.

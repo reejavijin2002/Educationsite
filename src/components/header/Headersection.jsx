@@ -22,7 +22,7 @@ const Headersection = () => {
           <div className="xs:hidden text-sm cursor-pointer text-end  sm:hidden md:flex text-md">
             <Link
               to="/"
-              className="lg:px-6  text-sm  text-decoration text-white font-[inherit]  md:px-1 font-normal  hover:text-orange-600"
+              className="lg:px-6  text-sm  text-decoration text-white font-[inherit]   md:px-1 font-medium  hover:text-orange-600"
             
             >
               HOME
@@ -30,31 +30,45 @@ const Headersection = () => {
 
             <Link
               to="/"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-normal  hover:text-orange-600"
+              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
            
             >
               ABOUT
             </Link>
             <Link
               to="/"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-normal hover:text-orange-600"
+              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+           
+            >
+              STORE
+            </Link>
+            <Link
+              to="/"
+              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
            
             >
               FEATURES
             </Link>
             <Link
               to="/"
-              className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-normal hover:text-orange-600"
+              className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
            
             >
               BLOG
             </Link>
             <Link
               to="/"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-normal hover:text-orange-600"
+              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
            
             >
               CONTACT
+            </Link>
+            <Link
+              to="/"
+              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+           
+            >
+              EVENTS
             </Link>
           </div>
 

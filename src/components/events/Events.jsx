@@ -11,7 +11,7 @@ const Events = () => {
         Our Events
       </h2>
       <div className="align-top justify-center mr-auto ml-auto w-14 h-0.5 bg-green-500 mt-6 mb-5"></div>
-      <div className="flex justify-center border border-1 border-black m-10 p-4">
+      <div className="flex justify-center border border-1  m-10 p-2">
         <h1 className="w-1/5 justify-center mr-auto ml-auto font-bold text-orange-600 text-center">
           18 <br></br>
           <p className="text-xs text-center text-gray-500"> MAY</p>
@@ -23,21 +23,22 @@ const Events = () => {
           style={{ object: "cover" }}
           height="250px"
           width="130px"
+          alt=""
         ></img>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto font-semibold">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto font-medium text-lg ">
           101 Standard Workshop for All Levels
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           Thursday @ 12:00 am Thursday @ 11:59 pm
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
 
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           350 5th Ave New York, United States
         </h5>
       </div>
-      <div className="flex justify-center border border-1 border-black m-10 p-4">
+      <div className="flex justify-center border border-1  m-10 p-2">
         <h1 className="w-1/5 justify-center mr-auto ml-auto font-bold text-orange-600 text-center">
           25 <br></br>
           <p className="text-xs text-center text-gray-500"> MAY</p>
@@ -49,21 +50,22 @@ const Events = () => {
           style={{ object: "cover" }}
           height="250px"
           width="130px"
+          alt=""
         ></img>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto font-semibold">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto font-medium text-lg">
           Leadership Academy for Administrator
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           Thursday @ 12:00 am Friday @ 11:59 pm
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
 
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           350 5th Ave New York, United States
         </h5>
       </div>
-      <div className="flex justify-center border border-1 border-black m-10 p-4">
+      <div className="flex justify-center border border-1  m-10 p-2">
         <h1 className="w-1/5 justify-center mr-auto ml-auto font-bold text-orange-600 text-center">
           28 <br></br>
           <p className="text-xs text-center text-gray-500"> AUG</p>
@@ -75,17 +77,18 @@ const Events = () => {
           style={{ object: "cover" }}
           height="250px"
           width="130px"
+          alt=""
         ></img>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto font-semibold">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto font-medium text-lg">
           Educator Collaborative Series
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           Tuesday @ 12:00 am Saturday @ 11:59 pm
         </h5>
         <div className="h-16 w-0.5 bg-gray-400"></div>
 
-        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400">
+        <h5 className="w-1/5 justify-center mr-auto ml-auto text-gray-400 font-medium text-lg">
           350 5th Ave New York, United States
         </h5>
       </div>

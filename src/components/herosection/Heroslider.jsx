@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from '../../assets/image/slide1.jpg';
+import img1 from '../../assets/image/authentic-book-club-scene.jpg';
 import img2 from '../../assets/image/slide2.jpg';
 import img3 from '../../assets/image/college-colleagues-studying-together.jpg';
 import Headersection from '../header/Headersection';
@@ -27,7 +27,7 @@ function Heroslider() {
       <Carousel.Item style={{ backgroundImage: `url(${img1})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
         <Headersection className="fixed" />
         <Carousel.Caption className='mb-56 '>
-        <p className='text-md'>Studeon innovative & successfull</p>
+        <p className='text-md font-serif'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold text-6xl'>ONLINE COURSES</h3>
           <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
@@ -36,7 +36,7 @@ function Heroslider() {
       <Carousel.Item style={{ backgroundImage: `url(${img2})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
         <Headersection className="fixed"  />
         <Carousel.Caption  className='mb-56 '>
-        <p className='text-md'>Studeon innovative & successfull</p>
+        <p className='text-md font-serif'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold text-6xl'>ANY LEVEL OR DEGREE</h3>
           <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
@@ -46,7 +46,7 @@ function Heroslider() {
       <Carousel.Item style={{ backgroundImage: `url(${img3})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
         <Headersection className="fixed"  />
         <Carousel.Caption  className='mb-56 '>
-        <p className='text-md'>Studeon innovative & successfull</p>
+        <p className='text-md font-serif'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold text-6xl'>CREATIVE APPROACH</h3>
           <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
