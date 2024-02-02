@@ -4,6 +4,7 @@ import img1 from '../../assets/image/authentic-book-club-scene.jpg';
 import img2 from '../../assets/image/slide2.jpg';
 import img3 from '../../assets/image/college-colleagues-studying-together.jpg';
 import Headersection from '../header/Headersection';
+import Headersection2 from '../header/Headersection2';
 
 function Heroslider() {
   const [index, setIndex] = useState(0);
@@ -23,38 +24,42 @@ function Heroslider() {
 
   return (
     <div class="relative">
-    <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={1000}>
-      <Carousel.Item style={{ backgroundImage: `url(${img1})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
-        <Headersection className="fixed" />
-        <Carousel.Caption className='mb-56 '>
-        <p className='text-md font-serif'>Studeon innovative & successfull</p>
+          <Headersection className="relative top-0 left-0 right-0 z-10" />
 
-          <h3 className='font-bold text-6xl'>ONLINE COURSES</h3>
-          <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
+    <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={1000} className='absolute'>
+
+
+      <Carousel.Item style={{ backgroundImage: `url(${img1})`,backgroundSize: 'cover',backgroundPosition: 'center center' }} className='md:h-[700px] xs:h-[500px] w-full'>
+        <Headersection2/>
+        <Carousel.Caption className='md:mb-56 xs:mb-32 '>
+        <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
+
+          <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>ONLINE COURSES</h3>
+          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{ backgroundImage: `url(${img2})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
-        <Headersection className="fixed"  />
-        <Carousel.Caption  className='mb-56 '>
-        <p className='text-md font-serif'>Studeon innovative & successfull</p>
+      <Carousel.Item style={{ backgroundImage: `url(${img2})`,backgroundSize: 'cover',backgroundPosition: 'center center' }} className='md:h-[700px] xs:h-[500px] w-full'>
+      <Headersection2/>
+        <Carousel.Caption  className='md:mb-56 xs:mb-32'>
+        <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
 
-          <h3 className='font-bold text-6xl'>ANY LEVEL OR DEGREE</h3>
-          <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
+          <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>ANY LEVEL OR DEGREE</h3>
+          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
 
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{ backgroundImage: `url(${img3})`,backgroundSize: 'cover' }} className='h-[700px] w-full'>
-        <Headersection className="fixed"  />
-        <Carousel.Caption  className='mb-56 '>
-        <p className='text-md font-serif'>Studeon innovative & successfull</p>
+      <Carousel.Item style={{ backgroundImage: `url(${img3})`,backgroundSize: 'cover',backgroundPosition: 'center center' }} className='md:h-[700px] xs:h-[500px] w-full'>
+      <Headersection2/>
+        <Carousel.Caption  className='md:mb-56 xs:mb-32'>
+        <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
 
-          <h3 className='font-bold text-6xl'>CREATIVE APPROACH</h3>
-          <button className='bg-green-500 px-5 py-3.5 rounded font-semibold mt-6'>More courses</button>
+          <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>CREATIVE APPROACH</h3>
+          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
 
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    <div class="absolute bottom-0 left-0 right-0 flex flex-col items-center mb-[-30px]">
+    <div class="absolute bottom-0 left-0 right-0 flex flex-col items-center mb-[-30px] hederbottom">
         <p class="text-center text-white font-medium">Explore Now!</p>
         <div class="flex justify-center ">
             <div onClick={handleSlide1Click} class="w-64 h-24 text-left text-white font-medium text-4xl py-3 px-2" style={{ backgroundImage: `url(${img1})`, backgroundSize: 'cover' }}>01</div>

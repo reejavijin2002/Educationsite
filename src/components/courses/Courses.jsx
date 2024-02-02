@@ -24,8 +24,9 @@ const Courses = () => {
         <div
           style={{
             display: "flex",
-            flexWrap: "nowrap",
+            flexWrap:"wrap",
             width: "fit-content",
+            justifyContent:"center",
             gap: "10px",
           }}
         >

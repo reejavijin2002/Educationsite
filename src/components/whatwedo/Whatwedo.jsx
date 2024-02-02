@@ -8,7 +8,7 @@ const Whatwedo = () => {
     <div className="mt-40 mb-40">
       <h3 className="text-center text-gray-400 font-serif">What We Do</h3>
       <h1 className="text-center font-bold">Unlimitted Possibilities</h1>
-      <div className="flex justify-center mt-20 ">
+      <div className="md:flex justify-center  mt-20 ">
         <div className="justify-center">
             <img src={icon1} alt="" className="ml-auto mr-auto mb-5"/>
           <h5 className="text-center mb-3">Online Courses</h5>

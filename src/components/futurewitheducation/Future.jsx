@@ -7,11 +7,11 @@ import img4 from "../../assets/image/bachelor (1).png";
 const Future = () => {
   return (
     <div>
-      <div className="bg-stone-100 w-full flex">
-        <div className="w-1/2">
+      <div className="bg-stone-100 w-full md:flex">
+        <div className="md:w-1/2 xs:w-full">
           <img src={img1} alt="" className="w-full h-[500px]" />
         </div>
-        <div className="p-5 w-1/2 mt-16">
+        <div className="p-5 md:w-1/2 xs:w-full mt-16">
           <h5 className="text-sm text-gray-400 font-serif">The Best Choice</h5>
           <h4 className="font-bold ">We Build Future with Education</h4>
           <div className="align-top justify-left mr-auto  w-10 mt-2 mb-2 h-0.5 bg-green-500 "></div>
@@ -22,7 +22,7 @@ const Future = () => {
             account of the system, and expound the actual teachings of the great
             explore.
           </p>
-          <div className="flex mt-10">
+          <div className="md:flex mt-10">
             <div className="flex">
               <div className="w-[15%]">
                 <img src={img4} alt="" className="mr-2" />
@@ -57,8 +57,8 @@ const Future = () => {
           </div>
         </div>
       </div>
-      <div className="bg-stone-100 w-full flex">
-        <div className="w-1/2 mt-16 p-5">
+      <div className="bg-stone-100 w-full md:flex">
+        <div className="md:w-1/2 xs:w-full mt-16 p-5">
           <h5 className="text-sm text-gray-400 font-serif">The Best Choice</h5>
           <h4 className="font-bold ">Get Free Consultation</h4>
           <div className="align-top justify-left mr-auto  w-10 mt-3 mb-2 h-0.5 bg-green-500  "></div>
@@ -90,7 +90,7 @@ const Future = () => {
               <div className="bg-gray-300 h-0.5 w-[95%] mt-2"></div>
               <button className="mt-14 bg-green-500 h-12 text-white font-semibold px-4 rounded">SEND MESSAGE</button>
         </div>
-        <div className=" w-1/2 ">
+        <div className=" md:w-1/2 xs:w-full ">
           <img src={img2} alt="" className="w-full h-[500px]" />
         </div>
       </div>

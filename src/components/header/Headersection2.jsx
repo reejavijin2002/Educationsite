@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { MdViewHeadline } from "react-icons/md";
 
-const Headersection = () => {
+const Headersection2 = () => {
   return (
     <div>
-    <header className="bg-black-opacity fixed w-full  top-0 h-16  shadow border-slate-200z-30  ">
+           <header className="bg-transparent sticky w-full  top-0 h-16  shadow border-slate-200z-30  ">
       <div className="px-4 ">
         <div className="flex items-center justify-between h-16 ">
     
@@ -91,8 +91,8 @@ const Headersection = () => {
         </div>
       </div>
     </header>
-  </div>
+    </div>
   )
 }
 
-export default Headersection
+export default Headersection2

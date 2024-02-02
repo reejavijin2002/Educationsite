@@ -14,3 +14,9 @@
 #scroll-container::-webkit-scrollbar {
     display: none;
 }
+
+@media(max-width:820px) {
+    .hederbottom {
+        display: none;
+    }
+}
