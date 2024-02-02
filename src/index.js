@@ -8,6 +8,7 @@ import Headersection from './components/header/Headersection';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Herosection from './components/herosection/Herosection';
 import Heroslider from './components/herosection/Heroslider';
+import Contact from './pages/Contact';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,8 @@ root.render(
     <Route path='/headersection' element={<Headersection/>}/>
     <Route path='/herosection' element={<Herosection/>}/>
     <Route path='/heroslide' element={<Heroslider/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+
 
 
 

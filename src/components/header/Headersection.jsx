@@ -57,7 +57,7 @@ const Headersection = () => {
               BLOG
             </Link>
             <Link
-              to="/"
+              to="/contact"
               className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
            
             >
