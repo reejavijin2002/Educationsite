@@ -5,6 +5,7 @@ import img2 from '../../assets/image/man3.jpg'
 
 const Footer = () => {
   return (
+    <>
     <div className="w-full md:h-[350px] xs:h-auto bg-[#323131] p-10 md:flex">
       <div className="md:w-1/3 xs:w-full pl-2">
         <h3 className=" text-white font-extrabold mb-10">Mellon</h3>
@@ -47,7 +48,13 @@ const Footer = () => {
 
 
       </div>
+     
     </div>
+     <div className="h-20 w-full bg-black p-3 text-gray-400">
+     AxiomThemes © 2024 All rights reserved. Terms of use and Privacy Policy
+
+     </div>
+     </>
   );
 };
 

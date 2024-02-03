@@ -1,5 +1,4 @@
 import React from 'react'
-import Headersection from '../header/Headersection'
 import Heroslider from './Heroslider'
 
 const Herosection = () => {

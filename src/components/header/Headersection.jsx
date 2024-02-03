@@ -29,25 +29,19 @@ const Headersection = () => {
             </Link>
 
             <Link
-              to="/"
+              to="/aboutus"
               className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
            
             >
               ABOUT
             </Link>
-            <Link
-              to="/"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
            
-            >
-              STORE
-            </Link>
             <Link
-              to="/"
+              to="/gallery"
               className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
            
             >
-              FEATURES
+              GALLERY
             </Link>
             <Link
               to="/"
