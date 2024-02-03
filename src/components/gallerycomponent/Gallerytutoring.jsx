@@ -9,13 +9,13 @@ const Gallerytutoring = () => {
   return (
     <div className="mb-20">
       <div className="md:flex px-5 gap-3 py-2">
-        <img src={img1} alt="" className="md:w-1/3 xs:w-full mb-2" />
-        <img src={img2} alt="" className="md:w-1/3 xs:w-full mb-2" />
-        <img src={img3} alt="" className="md:w-1/3 xs:w-full mb-2" />
+        <img src={img1} alt="" className="md:w-1/3 xs:w-full mb-2 zoomable-image" />
+        <img src={img2} alt="" className="md:w-1/3 xs:w-full mb-2 zoomable-image" />
+        <img src={img3} alt="" className="md:w-1/3 xs:w-full mb-2 zoomable-image" />
       </div>
       <div className="md:flex px-5 gap-3 py-2">
-        <img src={img8} alt="" className="md:w-1/3 xs:w-full mb-2" />
-        <img src={img9} alt="" className="md:w-1/3 xs:w-full mb-2" />
+        <img src={img8} alt="" className="md:w-1/3 xs:w-full mb-2 zoomable-image" />
+        <img src={img9} alt="" className="md:w-1/3 xs:w-full mb-2 zoomable-image" />
       </div>
     </div>
   );
