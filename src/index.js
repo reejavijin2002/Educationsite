@@ -14,6 +14,7 @@ import Galleryall from './components/gallerycomponent/Galleryall';
 import Gallerynews from './components/gallerycomponent/Gallerynews';
 import Galleryshedule from './components/gallerycomponent/Galleryshedule';
 import Gallerytutoring from './components/gallerycomponent/Gallerytutoring';
+import Events1 from './pages/Events1';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,8 @@ root.render(
     <Route path='/heroslide' element={<Heroslider/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/aboutus' element={<Aboutus/>}/>
+    <Route path='/events' element={<Events1/>}/>
+
     <Route path='/gallery' element={<Gallery/>}>
       <Route path='' element={<Galleryall/>} />
       <Route path='gallerynews' element={<Gallerynews/>} />
