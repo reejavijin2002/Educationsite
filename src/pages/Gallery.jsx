@@ -1,8 +1,8 @@
 import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import Headersection from "../components/header/Headersection";
 import Footer from "../components/footer/Footer";
 import Galleryall from "../components/gallerycomponent/Galleryall";
-import { Link, Outlet } from "react-router-dom";
 
 const Gallery = () => {
   return (
@@ -12,30 +12,34 @@ const Gallery = () => {
       <p className="text-center mb-0  text-xs text-gray-400">Home / Gallery</p>
 
       <div className="px-40 flex justify-center ">
-        <Link
+        <NavLink
           to="/gallery/"
-          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
+          activeClassName="text-orange-500"
+          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 active:text-orange-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
         >
           ALL
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/gallery/gallerynews"
-          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
+          activeClassName="text-orange-500"
+          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 active:text-orange-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
         >
           NEWS
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/gallery/galleryshedule"
-          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
+          activeClassName="text-orange-500"
+          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 active:text-orange-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
         >
-          SHEDULE
-        </Link>
-        <Link
+          SCHEDULE
+        </NavLink>
+        <NavLink
           to="/gallery/gallerytutoring"
-          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
+          activeClassName="text-orange-500"
+          className="md:px-10 xs:p-2 text-center text-xs text-gray-500 active:text-orange-500 font-semibold cursor-pointer no-underline hover:text-orange-500"
         >
           TUTORING
-        </Link>
+        </NavLink>
       </div>
 
       <Outlet></Outlet>

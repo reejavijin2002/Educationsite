@@ -23,7 +23,7 @@ const Contact = () => {
             <h6 className="mb-3 text-xl">Email:</h6>
             <p className="mb-3 text-lg text-red-500">info@yoursite.com</p>
             <h6 className="mb-3 text-xl">Social:</h6>
-            <div className="flex gap-2">
+            <div className="flex gap-2 mb-5">
               <FaTwitter/>
               <FaFacebookF />
               <FaInstagramSquare />

@@ -92,9 +92,11 @@ const Events = () => {
           350 5th Ave New York, United States
         </h5>
       </div>
+      <div className="justify-center ml-auto mr-auto">
       <button className="bg-green-500 h-14 w-48 justify-center mb-20 rounded text-white md:ml-[600px] sm:ml-[300px] xs:ml-[70px] font-medium  ">
         MORE EVENTS
       </button>
+      </div>
     </div>
   );
 }; 
