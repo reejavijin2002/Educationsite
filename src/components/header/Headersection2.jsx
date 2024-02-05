@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { MdViewHeadline } from "react-icons/md";
@@ -6,67 +6,65 @@ import { MdViewHeadline } from "react-icons/md";
 const Headersection2 = () => {
   return (
     <div>
-           <header className="bg-transparent sticky w-full  top-0 h-16  shadow border-slate-200z-30  ">
-      <div className="px-4 ">
-        <div className="flex items-center justify-between h-16 ">
-    
+      <header className="bg-transparent sticky w-full  top-0 h-16  shadow border-slate-200z-30  ">
+        <div className="px-4 ">
+          <div className="flex items-center justify-between h-16 ">
             <div className="flex caret-transparent no-underline ">
-              <div>
-              </div>{" "}
-              <div className="font-bold  text-xl lg:text-2xl  mt-2  text-white no-underline" >
-                <h3 className='text-decoration font-extrabold  no-underline'>Mellon</h3>
+              <div></div>{" "}
+              <div className="font-bold  text-xl lg:text-2xl  mt-2  text-white no-underline">
+                <Link to="/" className="no-underline text-white">
+                  <h3 className="text-decoration font-extrabold  no-underline">
+                    Mellon
+                  </h3>
+                </Link>
               </div>
             </div>
-    
 
-          <div className="xs:hidden text-sm cursor-pointer text-end  sm:hidden md:flex text-md">
-            <Link
-              to="/"
-              className="lg:px-6  text-sm  text-decoration text-white font-[inherit]   md:px-1 font-medium  hover:text-orange-600"
-            
-            >
-              HOME
-            </Link>
+            <div className="xs:hidden text-sm cursor-pointer text-end  sm:hidden md:flex text-md">
+              <Link
+                to="/"
+                className="lg:px-6  text-sm  text-decoration text-white font-[inherit]   md:px-1 font-medium  "
+              >
+                <p className="hover:text-orange-600">HOME</p>
+              </Link>
 
-            <Link
-              to="/aboutus"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
-           
-            >
-              ABOUT
-            </Link>
-          
-            <Link
-              to="/gallery"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
-           
-            >
-              GALLERY
-            </Link>
-            <Link
-              to="/"
-              className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
-           
-            >
-              BLOG
-            </Link>
-            <Link
-              to="/contact"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
-           
-            >
-              CONTACT
-            </Link>
-            <Link
-              to="/events"
-              className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
-           
-            >
-              EVENTS
-            </Link>
-          </div>
+              <Link
+                to="/aboutus"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+              >
+                <p className="hover:text-orange-600">ABOUT</p>
+              </Link>
 
-          {/* <div className="flex items-center space-x-3">
+              <Link
+                to="/gallery"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
+              >
+                <p className="hover:text-orange-600">GALLERY</p>
+              </Link>
+              <Link
+                to="/"
+                className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
+              >
+                                <p className="hover:text-orange-600">BLOG</p>
+
+              </Link>
+              <Link
+                to="/contact"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
+              >
+                               <p className="hover:text-orange-600">CONTACT</p>
+
+              </Link>
+              <Link
+                to="/events"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+              >
+                              <p className="hover:text-orange-600">EVENTS</p>
+
+              </Link>
+            </div>
+
+            {/* <div className="flex items-center space-x-3">
             <div></div>
             <div className=" xs:hidden sm:hidden md:flex text-sm">
               <div className="ml-4">
@@ -75,18 +73,18 @@ const Headersection2 = () => {
              
             </div>
           </div> */}
-          <div className="xs:visible md:hidden">
-            <Link to="">
-              <div className="xs:visible md:hidden">
-                <MdViewHeadline className="w-[25px] h-[25px] xs:visible md:invisible" />
-              </div>
-            </Link>
+            <div className="xs:visible md:hidden">
+              <Link to="">
+                <div className="xs:visible md:hidden">
+                  <MdViewHeadline className="w-[25px] h-[25px] xs:visible md:invisible" />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
     </div>
-  )
-}
+  );
+};
 
-export default Headersection2
+export default Headersection2;
