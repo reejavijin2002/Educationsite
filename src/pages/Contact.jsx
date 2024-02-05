@@ -1,24 +1,35 @@
 import React from "react";
 import Headersection from "../components/header/Headersection";
 import Footer from "../components/footer/Footer";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div>
       <Headersection />
-      <div className="p-10 bg-stone-100">
+      <div className="p-10 bg-stone-100 md:px-28">
         <h2 className="mt-14 text-center font-extrabold">Contacts</h2>
         <p className="text-center mb-20 text-xs text-gray-400">
           Home / Contacts
         </p>
         <div className="md:flex mb-20">
           <div className="md:w-1/3 xs:w-full">
-            <h6 className="mb-10 text-lg">Location:</h6>
-            <p className="mb-10 text-base">123, New Lenox Chicago, IL 60606</p>
-            <h6 className="mb-10 text-lg">Phone:</h6>
-            <p className="mb-10 text-base text-red-500">1(800)-456-789</p>
-            <h6 className="mb-10 text-lg">Email:</h6>
-            <p className="mb-10 text-base text-red-500">info@yoursite.com</p>
+            <h6 className="mb-3 text-xl">Location:</h6>
+            <p className="mb-3 text-lg">123, New Lenox Chicago, IL 60606</p>
+            <h6 className="mb-3 text-xl">Phone:</h6>
+            <p className="mb-3 text-lg text-red-500">1(800)-456-789</p>
+            <h6 className="mb-3 text-xl">Email:</h6>
+            <p className="mb-3 text-lg text-red-500">info@yoursite.com</p>
+            <h6 className="mb-3 text-xl">Social:</h6>
+            <div className="flex gap-2">
+              <FaTwitter/>
+              <FaFacebookF />
+              <FaInstagramSquare />
+            </div>
+
+
           </div>
           <div className="md:w-2/3 xs:w-full">
             <div className="md:flex w-full">

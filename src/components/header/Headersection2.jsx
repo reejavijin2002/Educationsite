@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { MdViewHeadline } from "react-icons/md";
+import logo from "../../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png"
+
 
 const Headersection2 = () => {
   return (
@@ -13,9 +15,9 @@ const Headersection2 = () => {
               <div></div>{" "}
               <div className="font-bold  text-xl lg:text-2xl  mt-2  text-white no-underline">
                 <Link to="/" className="no-underline text-white">
-                  <h3 className="text-decoration font-extrabold  no-underline">
-                    Mellon
-                  </h3>
+                <img src={logo} width='100px' className="text-decoration font-extrabold  no-underline">
+                    
+                    </img>
                 </Link>
               </div>
             </div>
