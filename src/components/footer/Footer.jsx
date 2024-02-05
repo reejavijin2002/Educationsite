@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
      
     </div>
-     <div className="h-20 w-full bg-black p-3 text-gray-400">
+     <div className="md:h-20 xs:h-auto w-full bg-black p-3 text-gray-400">
      AxiomThemes © 2024 All rights reserved. Terms of use and Privacy Policy
 
      </div>
