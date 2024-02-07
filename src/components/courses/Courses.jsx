@@ -9,13 +9,13 @@ import Card from "react-bootstrap/Card";
 
 const Courses = () => {
   return (
-    <div className="bg-stone-100 pt-20 pb-10">
+    <div className=" pt-20 pb-10">
       <h6 className="text-center text-gray-400 font-bold font-serif">
         The Best Choice
       </h6>
       <h3 className="text-center font-extrabold mb-10">Popular Choice</h3>
       <div
-        className="mb-20"
+        className="mb-20 "
         style={{
           display: "flex",
           overflowX: "hidden",
@@ -32,7 +32,7 @@ const Courses = () => {
             gap: "10px",
           }}
         >
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv   ">
             <Card.Img variant="top" src={img1} className="h-48" />
             <Card.Body>
               <div className="mainDiv">
@@ -60,7 +60,7 @@ const Courses = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img2} className="h-48" />
             <Card.Body>
               <div className="mainDiv">
@@ -89,7 +89,7 @@ const Courses = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img3} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm  rounded font-semibold text-white mt-[-25px]">
@@ -116,7 +116,7 @@ const Courses = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img4} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm  rounded font-semibold text-white mt-[-25px]">
@@ -143,7 +143,7 @@ const Courses = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img5} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm  rounded font-semibold text-white mt-[-25px]">
@@ -169,7 +169,7 @@ const Courses = () => {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img1} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm rounded font-semibold text-white mt-[-25px]">
@@ -195,7 +195,7 @@ const Courses = () => {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img3} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm  rounded font-semibold text-white mt-[-25px]">
@@ -221,7 +221,7 @@ const Courses = () => {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }} className="mainDiv">
+          <Card style={{ width: "18rem" }} className="mainDiv  ">
             <Card.Img variant="top" src={img2} className="h-48" />
             <Card.Body>
               <h6 className="w-56 h-6 pt-0.5 pt-auto pb-auto bg-green-500 text-center text-sm  rounded font-semibold text-white mt-[-25px]">

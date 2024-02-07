@@ -1,10 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { MdViewHeadline } from "react-icons/md";
 import logo from "../../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png"
+import Sidebar from "../sidebar/Sidebar";
 
 const Headersection = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isZoomed, setZoomed] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleZoom = () => {
+    setZoomed(true);
+    setTimeout(() => {
+      setZoomed(false);
+    }, 300); 
+  };
   return (
     <div>
       <header className="bg-black-opacity fixed w-full  top-0 h-16  shadow border-slate-200z-30  ">
@@ -72,13 +86,15 @@ const Headersection = () => {
             </div>
           </div> */}
             <div className="xs:visible md:hidden">
-              <Link to="">
-                <div className="xs:visible md:hidden">
+              <Link to="" onClick={() => { toggleSidebar(); handleZoom(); }}>
+                <div className={`xs:visible md:hidden ${isZoomed ? 'zoom-effect' : ''}`}>
                   <MdViewHeadline className="w-[25px] h-[25px] xs:visible md:invisible" />
                 </div>
               </Link>
             </div>
+         
           </div>
+          {isSidebarOpen && <Sidebar className="xs:invisible md:visible"/> }
         </div>
       </header>
     </div>

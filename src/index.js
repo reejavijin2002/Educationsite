@@ -15,6 +15,7 @@ import Gallerynews from './components/gallerycomponent/Gallerynews';
 import Galleryshedule from './components/gallerycomponent/Galleryshedule';
 import Gallerytutoring from './components/gallerycomponent/Gallerytutoring';
 import Events1 from './pages/Events1';
+import Sidebar from './components/sidebar/Sidebar';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +32,8 @@ root.render(
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/aboutus' element={<Aboutus/>}/>
     <Route path='/events' element={<Events1/>}/>
+    <Route path='/sidebar' element={<Sidebar/>}/>
+
 
     <Route path='/gallery' element={<Gallery/>}>
       <Route path='' element={<Galleryall/>} />
