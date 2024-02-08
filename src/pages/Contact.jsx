@@ -10,7 +10,7 @@ const Contact = () => {
     <div>
       <Headersection />
       <div className="p-10 bg-stone-100 md:px-28">
-        <h2 className="mt-14 text-center font-extrabold">Contacts</h2>
+        <h2 className="mt-14 text-center font-bold text-4xl font-sans">Contacts</h2>
         <p className="text-center mb-20 text-xs text-gray-400">
           Home / Contacts
         </p>

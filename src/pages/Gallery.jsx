@@ -8,7 +8,7 @@ const Gallery = () => {
   return (
     <div>
       <Headersection />
-      <h2 className="mt-20 text-center font-extrabold ">Gallery</h2>
+      <h2 className="mt-20 text-center font-bold text-4xl font-sans">Gallery</h2>
       <p className="text-center mb-0  text-xs text-gray-400">Home / Gallery</p>
 
       <div className="px-40 flex justify-center ">
