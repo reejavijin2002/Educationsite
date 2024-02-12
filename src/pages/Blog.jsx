@@ -24,7 +24,7 @@ const Blog = () => {
             <p className='font-bold mb-4'>Recent Posts</p>
             <div className='flex w-full '>
               <div className='w-[25%] px-1'>
-                <img src={img1} alt='' width='100px' height='100px' className='mt-[-5px]'  />
+                <img src={img1} alt='' width='100px' height='100px' className='mt-[-5px] rounded'   />
               </div>
               <div className='w-[75%] px-2'>
                 <Link to='/blog/post1' className='no-underline text-black hover:text-orange-400'><h6 className='text-xs mt-[-10px] hover:text-orange-400'>Facing Your Fears of Returning To School as an Adult</h6></Link>
@@ -33,7 +33,7 @@ const Blog = () => {
             </div>
             <div className='flex mt-4'>
               <div className='w-[25%] px-1'>
-                <img src={img2} alt='' width='100px' height='100px' className='mt-[-5px]' />
+                <img src={img2} alt='' width='100px' height='100px' className='mt-[-5px] rounded' />
               </div>
               <div className='w-[75%] px-2'>
                 <Link to='/blog/post2' className='no-underline text-black hover:text-orange-400'><h6 className='text-xs mt-[-10px] hover:text-orange-400'>Analysis: Independents Lead the Way, a North-South Divide and 4 Other Things</h6></Link>
@@ -42,7 +42,7 @@ const Blog = () => {
             </div>
             <div className='flex mt-4'>
               <div className='w-[25%] px-1'>
-                <img src={img3} alt='' width='100px' height='100px' className='mt-[-5px]' />
+                <img src={img3} alt='' width='100px' height='100px' className='mt-[-5px] rounded' />
               </div>
               <div className='w-[75%] px-2'>
               <Link to='/blog/post3' className='no-underline text-black hover:text-orange-400'><h6 className='text-xs mt-[-10px] hover:text-orange-400'>Improve Your Writing Skills with 6 Free Online Lessons</h6></Link>
