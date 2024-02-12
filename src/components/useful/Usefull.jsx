@@ -18,7 +18,7 @@ const Usefull = () => {
                 <img src={img2} alt='' className='ml-auto mr-auto mb-5' />
               <h1 className="text-4xl  text-white font-semibold">
             
-                <CountUp end={10000} duration={100} separator="," />
+                <CountUp end={8678} duration={100} separator="," />
               </h1>
               <h6 className="pl-4 font-bold text-white text-sm">LEARNERS EDUCATED</h6>
             </div>
@@ -26,7 +26,7 @@ const Usefull = () => {
             <img src={img3} alt=''className='ml-auto mr-auto mb-5' />
 
               <h1 className="text-4xl  text-white font-semibold">
-              <CountUp end={5000} duration={100} separator="," />
+              <CountUp end={5321} duration={100} separator="," />
 
               </h1>
               <h6 className="font-bold text-white text-sm">GRADUATES</h6>
@@ -35,7 +35,7 @@ const Usefull = () => {
             <img src={img4} alt='' className='ml-auto mr-auto mb-5' />
 
               <h1 className="text-4xl text-white font-semibold">
-              <CountUp end={20000} duration={100} separator="," />
+              <CountUp end={19654} duration={100} separator="," />
 
               </h1>
               <h6 className="font-bold text-white text-sm">COURCES PUBLISHED</h6>
@@ -44,7 +44,7 @@ const Usefull = () => {
             <img src={img5} alt='' className='ml-auto mr-auto mb-5' />
 
               <h1 className="text-4xl text-white font-semibold">
-              <CountUp end={20000} duration={100} separator="," />
+              <CountUp end={19321} duration={100} separator="," />
 
               </h1>
               <h6 className="font-bold text-white text-sm">GLOBAL LEARNERS</h6>

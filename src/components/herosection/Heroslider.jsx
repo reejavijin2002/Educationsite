@@ -35,7 +35,7 @@ function Heroslider() {
         <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>ONLINE COURSES</h3>
-          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
+          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded-sm font-medium mt-6'>More courses</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item style={{ backgroundImage: `url(${img2})`,backgroundSize: 'cover',backgroundPosition: 'center center' }} className='md:h-[700px] xs:h-[500px] w-full'>
@@ -44,7 +44,7 @@ function Heroslider() {
         <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>ANY LEVEL OR DEGREE</h3>
-          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
+          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded-sm font-medium mt-6'>More courses</button>
 
         </Carousel.Caption>
       </Carousel.Item>
@@ -54,7 +54,7 @@ function Heroslider() {
         <p className='md:text-md font-serif xs:text-sm'>Studeon innovative & successfull</p>
 
           <h3 className='font-bold md:text-6xl sm:text-4xl xs:text-[1.25rem]'>CREATIVE APPROACH</h3>
-          <button className='bg-green-500 md:px-5 md:py-3.5 xs:px-3 xs:py-2 rounded font-semibold mt-6'>More courses</button>
+          <button className='bg-green-500  md:py-3.5 xs:px-3 md:px-6 xs:py-2 rounded-sm font-medium mt-6'>More courses</button>
 
         </Carousel.Caption>
       </Carousel.Item>

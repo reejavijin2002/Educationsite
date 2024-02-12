@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Headersection from "../components/header/Headersection";
 import Footer from "../components/footer/Footer";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { Field, Form, Formik } from "formik";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject,setSubject]=useState("");
+  const [message, setMessage] = useState("");
+  const initialvalues1 = {
+    name: "",
+    email: "",
+    subject:"",
+    message: "",
+  };
+  const validateForm = () => {
+    const errors = {};
+    if (!name.trim()) {
+      errors.name = "Name is required";
+    }
+    if (!email.trim()) {
+      errors.email = "Email is required";
+    }
+    if (!subject.trim()) {
+      errors.subject = "Subject is required";
+    }
+    if (!message.trim()) {
+      errors.message = "Message is required";
+    }
+    return errors;
+  };
   return (
     <div>
       <Headersection />
@@ -31,33 +58,64 @@ const Contact = () => {
 
 
           </div>
-          <div className="md:w-2/3 xs:w-full">
+          <Formik initialValues={{ initialvalues1 }} validate={validateForm}>
+            {(formik)=>(
+          <Form className="md:w-2/3 xs:w-full">
             <div className="md:flex w-full">
-              <input
+              <div className=" w-full">
+              <Field
                 type="text"
                 placeholder="Your Name"
-                className="md:w-[50%] xs:w-full mr-4 xs:mb-6 md:mb-0 bg-white p-2 rounded"
+                className="md:w-[98%] xs:w-full mr-4 xs:mb-6 md:mb-0 bg-white p-2 rounded"
+                value={name}
+                onChange={(e) => setName(e.target.value.trim())}
               />
-              <input
+               {!name ? (
+                      <div className="validate md:w-[100%] xs:w-full mr-4 xs:mb-6 md:mb-0">{formik.errors.name}</div>
+                    ) : null}
+              </div>
+              <div className=" w-full">
+                
+              <Field
                 type="email"
                 placeholder="Your Email"
-                className="md:w-[50%] xs:w-full p-2 rounded"
+                className="md:w-[98%] xs:w-full md:ml-2 p-2 rounded"
+                value={email}
+                onChange={(e) => setEmail(e.target.value.trim())}
               />
+               {!email ? (
+                      <div className="validate md:w-[50%] md:ml-2 xs:w-full  xs:mb-6 md:mb-0">{formik.errors.email}</div>
+                    ) : null}
+              </div>
+                
             </div>
-            <input
+           
+            <Field
               type="text"
               placeholder="subject"
               className="w-full mt-4 p-2 h-10 rounded"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value.trim())}
             />
-            <input
+               {!subject ? (
+                      <div className="validate">{formik.errors.subject}</div>
+                    ) : null}
+            <Field
               type="text"
               placeholder="Your Message"
               className="w-full mt-4 h-32 p-2 rounded"
+              value={message}
+              onChange={(e) => setMessage(e.target.value.trim())}
             />
-            <button className="bg-green-500 text-white h-14 w-40 rounded mt-4 font-bold">
+               {!message ? (
+                  <div className="validate">{formik.errors.message}</div>
+                ) : null}
+            <button className="bg-green-500 text-white h-14 w-40 rounded mt-4 font-bold"  onClick={() => formik.handleSubmit}>
               SEND MESSAGE
             </button>
-          </div>
+          </Form>
+          )}
+          </Formik>
         </div>
       </div>
       <iframe

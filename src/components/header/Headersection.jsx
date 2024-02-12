@@ -57,7 +57,7 @@ const Headersection = () => {
                 <p className="hover:text-orange-600">GALLERY</p>
               </Link>
               <Link
-                to="/"
+                to="/blog"
                 className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
               >
                 <p className="hover:text-orange-600">BLOG</p>
