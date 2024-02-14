@@ -10,39 +10,39 @@ const Sidebar = () => {
           to="/"
           className="lg:px-6 text-sm mb-4 text-decoration text-white font-[inherit] md:px-1 font-medium"
         >
-          <p className="hover:text-orange-600 text-center">HOME</p>
+          <p className="hover:text-orange-600 text-left">HOME</p>
         </Link>
 
         <Link
           to="/aboutus"
           className="lg:px-6 text-sm text-decoration mb-4 md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
         >
-          <p className="hover:text-orange-600 text-center">ABOUT</p>
+          <p className="hover:text-orange-600 text-left">ABOUT</p>
         </Link>
 
         <Link
           to="/gallery"
           className="lg:px-6 text-sm text-decoration mb-4 md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
         >
-          <p className="hover:text-orange-600 text-center">GALLERY</p>
+          <p className="hover:text-orange-600 text-left">GALLERY</p>
         </Link>
         <Link
-          to="/"
+          to="/blog"
           className="lg:px-6 text-sm text-decoration mb-4 md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
         >
-          <p className="hover:text-orange-600 text-center">BLOG</p>
+          <p className="hover:text-orange-600 text-left">BLOG</p>
         </Link>
         <Link
           to="/contact"
           className="lg:px-6 text-sm text-decoration mb-4 md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
         >
-          <p className="hover:text-orange-600 text-center">CONTACT</p>
+          <p className="hover:text-orange-600 text-left">CONTACT</p>
         </Link>
         <Link
           to="/events"
           className="lg:px-6 text-sm text-decoration mb-4 md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
         >
-          <p className="hover:text-orange-600 text-center">EVENTS</p>
+          <p className="hover:text-orange-600 text-left">EVENTS</p>
         </Link>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MdViewHeadline } from "react-icons/md";
 import logo from "../../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png"
 import Sidebar from "../sidebar/Sidebar";
+import img1 from '../../assets/image/user (1).png'
 
 const Headersection = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -73,6 +74,12 @@ const Headersection = () => {
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
               >
                 <p className="hover:text-orange-600">EVENTS</p>
+              </Link>
+              <Link
+                to="/login"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+              >
+                <p className="hover:text-orange-600">LOGIN</p>
               </Link>
             </div>
 

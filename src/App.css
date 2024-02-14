@@ -89,3 +89,15 @@
 .validate {
     color: red;
 }
+
+@media (max-width:760px) {
+    .seconddiv {
+        display: none;
+    }
+    .firstdiv {
+        width: 100%;
+    }
+    .slidingicon {
+        display: none;
+    }
+}

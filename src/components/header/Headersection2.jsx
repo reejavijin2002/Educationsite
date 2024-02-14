@@ -78,6 +78,12 @@ const Headersection2 = () => {
                               <p className="hover:text-orange-600">EVENTS</p>
 
               </Link>
+              <Link
+                to="/login"
+                className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
+              >
+                <p className="hover:text-orange-600">LOGIN</p>
+              </Link>
             </div>
 
             {/* <div className="flex items-center space-x-3">

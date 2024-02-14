@@ -22,6 +22,9 @@ import Blogone from "./components/blogcomponents/Blogone";
 import Post1 from "./components/blogcomponents/Post1";
 import Post2 from "./components/blogcomponents/Post2";
 import Post3 from "./components/blogcomponents/Post3";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+
 
 const Root = () => {
   const [loading, setLoading] = useState(true);
@@ -54,6 +57,10 @@ const Root = () => {
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/events" element={<Events1 />} />
             <Route path="/sidebar" element={<Sidebar />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
+
+
 
             <Route path="/gallery" element={<Gallery />}>
               <Route path="" element={<Galleryall />} />

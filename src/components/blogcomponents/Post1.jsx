@@ -5,15 +5,15 @@ const Post1 = () => {
   return (
     <div>
       <div>
-        <img src={img1} alt="" className="w-full h-[350px] md:px-5 xs:px-3" />
-        <p className="text-[15px] md:px-5 xs:px-3 mt-1 text-gray-400">
+        <img src={img1} alt="" className="w-full h-[400px] md:px-8 xs:px-3" />
+        <p className="text-[15px] md:px-8 xs:px-3 mt-1 text-gray-400">
           02.01.2017by Mark Chapman
         </p>
 
-        <h6 className="md:px-5 xs:px-3 mt-3">
+        <h6 className="md:px-8 xs:px-3 mt-3">
           Facing Your Fears of Returning To School as an Adult
         </h6>
-        <p className="md:px-5 xs:px-3 mt-3">
+        <p className="md:px-8 xs:px-3 mt-3">
           Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
           porro quisquam est, qui dolorem ipsum quiaolor sit amet, consectetur,
           adipisci velit, sed quia non numquam eius modi tempora incidunt ut
