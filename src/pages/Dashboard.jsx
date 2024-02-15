@@ -34,7 +34,7 @@ const Dashboard = () => {
       >
         <img
           src={logo}
-          className={`cursor-pointer duration-500  h-28 ${
+          className={`cursor-pointer duration-600  h-28 ${
             open && "rotate-[360deg] w-36"
           }`}
         />
