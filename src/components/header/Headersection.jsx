@@ -13,6 +13,9 @@ const Headersection = () => {
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
+  const toggleSidebar1 = () => {
+    setSidebarOpen(isSidebarOpen);
+  };
 
   const handleZoom = () => {
     setZoomed(true);
@@ -101,7 +104,7 @@ const Headersection = () => {
             </div>
          
           </div>
-          {isSidebarOpen && <Sidebar className="xs:invisible md:visible"/> }
+          {isSidebarOpen && <Sidebar className="xs:invisible md:visible" toggleSidebar1={toggleSidebar} /> }
         </div>
       </header>
     </div>
