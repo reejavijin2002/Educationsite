@@ -4,7 +4,7 @@ import img2 from "../assets/image/logo.png";
 import img3 from "../assets/image/monitor.png";
 import img4 from "../assets/image/mail-inbox-app.png";
 import img5 from "../assets/image/user (2).png";
-import img6 from "../assets/image/calendar.png";
+// import img6 from "../assets/image/calendar.png";
 import img7 from "../assets/image/loupe.png";
 import img8 from "../assets/image/dashboard.png";
 import img9 from "../assets/image/document.png";
@@ -79,7 +79,7 @@ const Dashboard = () => {
             className="flex  rounded-md px-2 py-2 cursor-pointer hover:bg-green-400 hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white"
             onClick={toggleDropdown}
           >
-            <img src={img6} />
+            <img src={img5} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
               Schedule
             </span>
@@ -108,7 +108,7 @@ const Dashboard = () => {
                 onClick={() => setActiveListItem("Date")}
               >
                 {" "}
-                <img src={img6} />
+                <img src={img5} />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
