@@ -8,7 +8,7 @@ import img5 from "../assets/image/user (2).png";
 import img7 from "../assets/image/loupe.png";
 import img8 from "../assets/image/dashboard.png";
 import img9 from "../assets/image/document.png";
-import img10 from "../assets/image/setting.png";
+// import img10 from "../assets/image/setting.png";
 import logo from "../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png";
 import { Link } from "react-router-dom";
 import home from "../assets/image/main.jpg";
@@ -160,7 +160,7 @@ const Dashboard = () => {
             onClick={() => setActiveListItem("Settings")}
           >
             {" "}
-            <img src={img10} />
+            <img src={img9} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
               Setting
             </span>
