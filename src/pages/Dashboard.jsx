@@ -2,18 +2,21 @@ import { useState } from "react";
 import img1 from "../assets/image/control.png";
 import img2 from "../assets/image/logo.png";
 import img3 from "../assets/image/monitor.png";
-import img4 from "../assets/image/mail-inbox-app.png";
-import img5 from "../assets/image/user (2).png";
-import img6 from "../assets/image/calendar (1).png";
-import img7 from "../assets/image/loupe.png";
-import img8 from "../assets/image/dashboard.png";
-import img9 from "../assets/image/document.png";
+import img4 from "../assets/image/baner.png";
+import img5 from "../assets/image/event.png";
+import img6 from "../assets/image/online-learning (2).png";
+import img7 from "../assets/image/gallery.png";
+import img8 from "../assets/image/blogging.png";
+import img9 from "../assets/image/team-work.png";
 import img10 from "../assets/image/cogwheel.png";
 import logo from "../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png";
 import { Link } from "react-router-dom";
 import home from "../assets/image/main.jpg";
 import img11 from "../assets/image/down-arrow.png";
-import img12 from "../assets/image/clock.png";
+import img12 from "../assets/image/clipboard.png";
+import img13 from '../assets/image/plus.png'
+import img14 from '../assets/image/testimonial.png'
+
 
 
 const Dashboard = () => {
@@ -34,7 +37,7 @@ const Dashboard = () => {
       >
         <img
           src={logo}
-          className={`cursor-pointer duration-600  h-28 ${
+          className={`cursor-pointer duration-500  h-28 ${
             open && "rotate-[360deg] w-36"
           }`}
         />
@@ -60,7 +63,7 @@ const Dashboard = () => {
             {" "}
             <img src={img4} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Inbox
+              Banner
             </span>
           </li>
           <li
@@ -72,7 +75,7 @@ const Dashboard = () => {
             {" "}
             <img src={img5} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Accounts
+              Events
             </span>
           </li>
           <li
@@ -81,7 +84,7 @@ const Dashboard = () => {
           >
             <img src={img6} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Schedule
+            Courses
             </span>
             <img src={img11} className="ml-auto" />
           </li>
@@ -98,7 +101,7 @@ const Dashboard = () => {
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  Time
+                  Courses List
                 </span>
               </li>
               <li
@@ -108,11 +111,11 @@ const Dashboard = () => {
                 onClick={() => setActiveListItem("Date")}
               >
                 {" "}
-                <img src={img6} />
+                <img src={img13} />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  Date
+                  New Courses 
                 </span>
               </li>
             </div>
@@ -126,7 +129,7 @@ const Dashboard = () => {
             {" "}
             <img src={img7} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Search
+              Gallery
             </span>
           </li>
           <li
@@ -138,7 +141,7 @@ const Dashboard = () => {
             {" "}
             <img src={img8} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Analytics
+              Blog
             </span>
           </li>
           <li
@@ -150,7 +153,19 @@ const Dashboard = () => {
             {" "}
             <img src={img9} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
-              Files
+              Our Team
+            </span>
+          </li>
+          <li
+            className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
+              activeListItem === "testimonial" ? "activeListItem" : ""
+            }`}
+            onClick={() => setActiveListItem("testimonial")}
+          >
+            {" "}
+            <img src={img14} />
+            <span className={`${!open && "hidden"} origin-left duration-200`}>
+              Testimonial
             </span>
           </li>
           <li

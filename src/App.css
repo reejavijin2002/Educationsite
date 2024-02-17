@@ -68,6 +68,10 @@
     z-index: -1;
 }
 
+.custom-z-index1 {
+    z-index: 1;
+}
+
 #custom-z-index1 {
     z-index: 1;
     /* Z-index value on hover */

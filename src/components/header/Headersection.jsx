@@ -24,8 +24,8 @@ const Headersection = () => {
     }, 300); 
   };
   return (
-    <div>
-      <header className="bg-black-opacity fixed w-full  top-0 h-16  shadow border-slate-200z-30  ">
+    <div className="">
+      <header className="bg-black-opacity fixed w-full custom-z-index1  top-0 h-16  shadow border-slate-200z-30  ">
         <div className="px-4 ">
           <div className="flex items-center justify-between h-16 ">
             <div className="flex caret-transparent no-underline ">
