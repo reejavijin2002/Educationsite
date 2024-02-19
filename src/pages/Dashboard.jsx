@@ -10,7 +10,7 @@ import img8 from "../assets/image/blogging.png";
 import img9 from "../assets/image/team-work.png";
 import img10 from "../assets/image/cogwheel.png";
 import logo from "../assets/image/mellon_brand._logo_FIN__2__page-0001-removebg-preview.png";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import home from "../assets/image/main.jpg";
 import img11 from "../assets/image/down-arrow.png";
 import img12 from "../assets/image/clipboard.png";
@@ -22,13 +22,16 @@ import img14 from '../assets/image/testimonial.png'
 const Dashboard = () => {
   const [open, setOpen] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [activeListItem, setActiveListItem] = useState("Dashboard"); // Track active list item
+  const [activeListItem, setActiveListItem] = useState("/dashboard/");
+    const navigate=useNavigate()
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+  
 
   return (
+    <>
     <div className="flex">
       <div
         className={`${
@@ -42,11 +45,12 @@ const Dashboard = () => {
           }`}
         />
         <ul className="pt-0" id="ul1">
+          <Link to='/dashboard/' className="no-underline">
           <li
             className={`flex  rounded-md  px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-0 bg-light-white ${
-              activeListItem === "Dashboard" ? "activeListItem" : ""
+              activeListItem === "/dashboard/" ? "activeListItem" : ""
             }`}
-            onClick={() => setActiveListItem("Dashboard")}
+            onClick={() => setActiveListItem("/dashboard/")}
           >
             {" "}
             <img src={img3} />
@@ -54,18 +58,21 @@ const Dashboard = () => {
               Dashboard
             </span>
           </li>
+          </Link>
+          <Link to='/dashboard/baner' className="no-underline">
           <li
-            className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold  text-sm items-center gap-x-4 mt-3 bg-light-white ${
-              activeListItem === "inbox" ? "activeListItem" : ""
+            className={`flex  rounded-md px-2 py-2 hover:bg-green-400 no-underline transition cursor-pointer hover:bg-light-white text-white font-semibold  text-sm items-center gap-x-4 mt-3 bg-light-white ${
+              activeListItem === "/dashboard/baner" ? "activeListItem" : ""
             }`}
-            onClick={() => setActiveListItem("inbox")}
+            onClick={() => setActiveListItem("/dashboard/baner")}
           >
             {" "}
             <img src={img4} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left no-underline duration-200`}>
               Banner
             </span>
           </li>
+          </Link>
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "Accounts" ? "activeListItem" : ""
@@ -188,8 +195,8 @@ const Dashboard = () => {
           onClick={() => setOpen(!open)}
         />
       </div>
-      <div className="h-screen flex-1 p-2 w-[80%] seconddiv xs:invisible sm:visible">
-        <header className="bg-stone-50 sticky   top-0   shadow border-slate-200z-30 ">
+      <div className="h-screen flex-1 p-2 w-[80%] seconddiv ">
+        <header className="bg-stone-50 sticky   top-0 xs:invisible sm:visible  shadow border-slate-200z-30 ">
           <div className="px-4 ">
             <div className="flex items-center justify-between h-16 ">
               <Link to="/">
@@ -230,8 +237,12 @@ const Dashboard = () => {
             </div>
           </div>
         </header>
+        <Outlet/>
       </div>
+     
     </div>
+    
+     </>
   );
 };
 export default Dashboard;

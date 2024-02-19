@@ -24,6 +24,8 @@ import Post2 from "./components/blogcomponents/Post2";
 import Post3 from "./components/blogcomponents/Post3";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Dashfirst from "./components/dashfirst/Dashfirst";
+import Baneradding from "./components/baneradding/Baneradding";
 
 
 const Root = () => {
@@ -58,7 +60,10 @@ const Root = () => {
             <Route path="/events" element={<Events1 />} />
             <Route path="/sidebar" element={<Sidebar />} />
             <Route path="/login" element={<Login/>} />
-            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/dashboard" element={<Dashboard/>} >
+              <Route path="" element={<Dashfirst/>}/>
+              <Route path="baner" element={<Baneradding/>}/>
+            </Route>
 
 
 
