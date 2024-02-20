@@ -41,7 +41,7 @@ const Root = () => {
     <React.StrictMode>
       <BrowserRouter>
         {loading ? (
-          <div class="loader-container">
+          <div className="loader-container">
             <ScaleLoader
               color={"#0bd912"}
               loading={loading}

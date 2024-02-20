@@ -36,7 +36,7 @@ const Dashboard = () => {
       <div
         className={`${
           open ? "w-[20%]" : "w-20 "
-        } bg-gradient-to-r from-green-500 via-green-600 to-green-500  h-auto p-0 firstdiv  pt-0 relative  duration-300 rounded-3xl m-1 `}
+        } bg-gradient-to-r from-green-500 via-green-600 to-green-500  h-100% p-0 firstdiv  pt-0 relative  duration-300 rounded-3xl m-1 `}
       >
         <img
           src={logo}
