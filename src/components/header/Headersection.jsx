@@ -44,45 +44,45 @@ const Headersection = () => {
                 to="/"
                 className="lg:px-6  text-sm  text-decoration text-white font-[inherit]   md:px-1 font-medium  "
               >
-                <p className="hover:text-orange-600">HOME</p>
+                <p className="hover:text-orange-600 font-body ">HOME</p>
               </Link>
 
               <Link
                 to="/aboutus"
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">ABOUT</p>
+                <p className="hover:text-orange-600 font-body">ABOUT</p>
               </Link>
 
               <Link
                 to="/gallery"
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">GALLERY</p>
+                <p className="hover:text-orange-600 font-body">GALLERY</p>
               </Link>
               <Link
                 to="/blog"
                 className="lg:px-6 text-sm text-decoration md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">BLOG</p>
+                <p className="hover:text-orange-600 font-body">BLOG</p>
               </Link>
               <Link
                 to="/contact"
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">CONTACT</p>
+                <p className="hover:text-orange-600 font-body">CONTACT</p>
               </Link>
               <Link
                 to="/events"
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">EVENTS</p>
+                <p className="hover:text-orange-600 font-body">EVENTS</p>
               </Link>
               <Link
                 to="/login"
                 className="lg:px-6 text-sm text-decoration  md:px-1 text-white font-[inherit] font-medium  hover:text-orange-600"
               >
-                <p className="hover:text-orange-600">LOGIN</p>
+                <p className="hover:text-orange-600 font-body">LOGIN</p>
               </Link>
             </div>
 

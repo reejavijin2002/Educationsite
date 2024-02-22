@@ -11,7 +11,7 @@ const Blog = () => {
     <div>
         <Headersection/>
         <div>
-        <h2 className="mt-24 text-center font-bold text-4xl  font-sans">Blog</h2>
+        <h2 className="mt-24 text-center font-bold text-4xl  font-body">Blog</h2>
         <p className="text-center mb-10 text-xs text-gray-400">
           Home / Blog
         </p>
