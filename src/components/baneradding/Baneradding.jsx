@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import img1 from "../../assets/image/cloud-storage_1517985.png";
 import { useRef } from "react";
 import img2 from "../../assets/image/jpgindumark.jpg";
+import BanerUpload from "../../service/ap1/BanerUpload";
 
-const Baneradding = () => {
+
+const Baneradding = ({image1}) => {
   const InputRef = useRef(null);
   const [image, setImage] = useState([]);
 
@@ -42,6 +44,14 @@ const Baneradding = () => {
     console.log(newImages);
 
     setImage(newImages);
+  };
+  const handleUploadImages = async () => {
+    try {
+      await Promise.all(image.map(image => BanerUpload(image)));
+      console.log("Images uploaded successfully!");
+    } catch (error) {
+      console.error("Error uploading images:", error);
+    }
   };
 
   const dragPerson = useRef(0);
@@ -106,6 +116,8 @@ const Baneradding = () => {
           </>
         ))}
       </div>
+      <button onClick={handleUploadImages} className="ml-auto mr-auto bg-green-400 p-2 text-white font-body font-semibold rounded-md mt-4 align-middle mx-5">Upload Images</button>
+
     </div>
   );
 };
