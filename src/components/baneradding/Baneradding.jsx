@@ -3,9 +3,9 @@ import img1 from "../../assets/image/cloud-storage_1517985.png";
 import { useRef } from "react";
 import img2 from "../../assets/image/jpgindumark.jpg";
 import BanerUpload from "../../service/ap1/BanerUpload";
+import ImageDelete from "../../service/ap1/ImageDelete";
 
-
-const Baneradding = ({image1}) => {
+const Baneradding = ({ image1 }) => {
   const InputRef = useRef(null);
   const [image, setImage] = useState([]);
 
@@ -20,14 +20,25 @@ const Baneradding = ({image1}) => {
     for (let i = 0; i < files.length; i++) {
       newImages.push(files[i]);
     }
+    handleUploadImages();
 
     setImage(newImages);
   };
-  const handleDeleteImage = (index) => {
-    const newImages = [...image];
-    newImages.splice(index, 1);
-    setImage(newImages);
-  };
+  const handleDeleteImage = async (index) => {
+    try {
+     const newImages = [...image];
+      const deletedImage = newImages[index];
+      newImages.splice(index, 1);
+       setImage(newImages);
+      await ImageDelete([deletedImage.name]); 
+        console.log("Image deleted successfully!");
+    } catch (error) {
+        console.error("Error deleting image:", error);
+    }
+};
+
+
+
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -44,10 +55,11 @@ const Baneradding = ({image1}) => {
     console.log(newImages);
 
     setImage(newImages);
+    handleUploadImages();
   };
   const handleUploadImages = async () => {
     try {
-      await Promise.all(image.map(image => BanerUpload(image)));
+      await Promise.all(image.map((image) => BanerUpload(image)));
       console.log("Images uploaded successfully!");
     } catch (error) {
       console.error("Error uploading images:", error);
@@ -116,8 +128,6 @@ const Baneradding = ({image1}) => {
           </>
         ))}
       </div>
-      <button onClick={handleUploadImages} className="ml-auto mr-auto bg-green-400 p-2 text-white font-body font-semibold rounded-md mt-4 align-middle mx-5">Upload Images</button>
-
     </div>
   );
 };
