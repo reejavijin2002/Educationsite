@@ -1,44 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import img1 from "../../assets/image/cloud-storage_1517985.png";
 import { useRef } from "react";
 import img2 from "../../assets/image/jpgindumark.jpg";
 import BanerUpload from "../../service/ap1/BanerUpload";
 import ImageDelete from "../../service/ap1/ImageDelete";
 
-const Baneradding = ({ image1 }) => {
+const Baneradding = (Filename) => {
   const InputRef = useRef(null);
   const [image, setImage] = useState([]);
+  const [file, setFile] = useState(false);
+  const [true1, setTrue1] = useState(false);
+  const [uploadStatusList, setUploadStatusList] = useState([]);
+  const [messageList, setMessageList] = useState([]);
+  const [filenameList, setFilenameList] = useState([]);
 
   const handleImageClick = () => {
     InputRef.current.click();
   };
 
-  const handleViewImage = (e) => {
-    const files = e.target.files;
-    const newImages = [...image];
-
-    for (let i = 0; i < files.length; i++) {
-      newImages.push(files[i]);
-    }
-    handleUploadImages();
-
+  const handleViewImage = async (e) => {
+    const files = Array.from(e.target.files);
+    const newImages = [...image, ...files];
+  
+    // Upload new images first
+  
+  
+    // Update the state with new images
     setImage(newImages);
+    await handleUploadImages(files);
+  };
+  
+  const fileHandler = () => {
+    true1 === true && setFile(true);
   };
   const handleDeleteImage = async (index) => {
     try {
-     const newImages = [...image];
+      setTrue1(true);
+
+      const newImages = [...image];
       const deletedImage = newImages[index];
       newImages.splice(index, 1);
-       setImage(newImages);
-      await ImageDelete([deletedImage.name]); 
-        console.log("Image deleted successfully!");
+      setImage(newImages);
+      const uploadStatus = uploadStatusList[index];
+      const message = messageList[index];
+      const filename = filenameList[index];
+      console.log(message, "0987654321");
+
+      // Pass values to ImageDelete
+      await ImageDelete(filename);
+      console.log("Image deleted successfully!");
     } catch (error) {
-        console.error("Error deleting image:", error);
+      console.error("Error deleting image:", error);
     }
-};
-
-
-
+  };
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -57,14 +71,43 @@ const Baneradding = ({ image1 }) => {
     setImage(newImages);
     handleUploadImages();
   };
-  const handleUploadImages = async () => {
+  const handleUploadImages = async (files) => {
     try {
-      await Promise.all(image.map((image) => BanerUpload(image)));
-      console.log("Images uploaded successfully!");
+        const newImages = [...image, ...files];
+        const uploadPromises = [];
+
+        for (let i = image.length; i < newImages.length; i++) {
+            const img = newImages[i];
+            const uploadPromise = BanerUpload(img, fileHandler);
+            uploadPromises.push({ promise: uploadPromise, index: i });
+        }
+
+        const uploadResults = await Promise.all(
+            uploadPromises.map((item) => item.promise)
+        );
+
+        // Update state with the results
+        const updatedUploadStatuses = [...uploadStatusList];
+        const updatedMessages = [...messageList];
+        const updatedFilenames = [...filenameList];
+
+        uploadResults.forEach((result, i) => {
+            updatedUploadStatuses[uploadPromises[i].index] = result.ImageUploadStatus;
+            updatedMessages[uploadPromises[i].index] = result.Message;
+            updatedFilenames[uploadPromises[i].index] = result.Filename;
+        });
+
+        setUploadStatusList(updatedUploadStatuses);
+        setMessageList(updatedMessages);
+        setFilenameList(updatedFilenames);
+        setImage(newImages);
+
+        console.log("All images uploaded successfully!");
     } catch (error) {
-      console.error("Error uploading images:", error);
+        console.error("Error uploading images:", error);
     }
-  };
+};
+
 
   const dragPerson = useRef(0);
   const draggedOverperson = useRef(0);
