@@ -13,6 +13,31 @@ const Baneradding = (Filename) => {
   const [uploadStatusList, setUploadStatusList] = useState([]);
   const [messageList, setMessageList] = useState([]);
   const [filenameList, setFilenameList] = useState([]);
+  const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
+
+
+
+
+  useEffect(() => {
+    const handleBeforeUnload = async () => {
+      if (filenameList.length > 0 && !submitButtonClicked) {
+        try {
+          for (const filename of filenameList) {
+            await ImageDelete(filename);
+          }
+          console.log("Images deleted successfully before unload.");
+        } catch (error) {
+          console.error("Error deleting images before unload:", error);
+        }
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [filenameList, submitButtonClicked]);
 
   const handleImageClick = () => {
     InputRef.current.click();
@@ -25,7 +50,7 @@ const Baneradding = (Filename) => {
     setImage(newImages);
     await handleUploadImages(files);
   };
-  
+
   const fileHandler = () => {
     true1 === true && setFile(true);
   };
@@ -36,19 +61,30 @@ const Baneradding = (Filename) => {
       const newImages = [...image];
       const deletedImage = newImages[index];
       newImages.splice(index, 1);
-      setImage(newImages);
-      const uploadStatus = uploadStatusList[index];
-      const message = messageList[index];
-      const filename = filenameList[index];
-      console.log(message, "0987654321");
 
-    
+      setImage(newImages);
+
+      const updatedUploadStatuses = [...uploadStatusList];
+      const updatedMessages = [...messageList];
+      const updatedFilenames = [...filenameList];
+
+      updatedUploadStatuses.splice(index, 1);
+      updatedMessages.splice(index, 1);
+      updatedFilenames.splice(index, 1);
+
+      setUploadStatusList(updatedUploadStatuses);
+      setMessageList(updatedMessages);
+      setFilenameList(updatedFilenames);
+
+      const filename = filenameList[index];
+
       await ImageDelete(filename);
       console.log("Image deleted successfully!");
     } catch (error) {
       console.error("Error deleting image:", error);
     }
   };
+
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -68,41 +104,40 @@ const Baneradding = (Filename) => {
   };
   const handleUploadImages = async (files) => {
     try {
-        const newImages = [...image, ...files];
-        const uploadPromises = [];
+      const newImages = [...image, ...files];
+      const uploadPromises = [];
 
-        for (let i = image.length; i < newImages.length; i++) {
-            const img = newImages[i];
-            const uploadPromise = BanerUpload(img, fileHandler);
-            uploadPromises.push({ promise: uploadPromise, index: i });
-        }
+      for (let i = image.length; i < newImages.length; i++) {
+        const img = newImages[i];
+        const uploadPromise = BanerUpload(img, fileHandler);
+        uploadPromises.push({ promise: uploadPromise, index: i });
+      }
 
-        const uploadResults = await Promise.all(
-            uploadPromises.map((item) => item.promise)
-        );
+      const uploadResults = await Promise.all(
+        uploadPromises.map((item) => item.promise)
+      );
 
-      
-        const updatedUploadStatuses = [...uploadStatusList];
-        const updatedMessages = [...messageList];
-        const updatedFilenames = [...filenameList];
+      const updatedUploadStatuses = [...uploadStatusList];
+      const updatedMessages = [...messageList];
+      const updatedFilenames = [...filenameList];
 
-        uploadResults.forEach((result, i) => {
-            updatedUploadStatuses[uploadPromises[i].index] = result.ImageUploadStatus;
-            updatedMessages[uploadPromises[i].index] = result.Message;
-            updatedFilenames[uploadPromises[i].index] = result.Filename;
-        });
+      uploadResults.forEach((result, i) => {
+        updatedUploadStatuses[uploadPromises[i].index] =
+          result.ImageUploadStatus;
+        updatedMessages[uploadPromises[i].index] = result.Message;
+        updatedFilenames[uploadPromises[i].index] = result.Filename;
+      });
 
-        setUploadStatusList(updatedUploadStatuses);
-        setMessageList(updatedMessages);
-        setFilenameList(updatedFilenames);
-        setImage(newImages);
-
-        console.log("All images uploaded successfully!");
+      setUploadStatusList(updatedUploadStatuses);
+      setMessageList(updatedMessages);
+      setFilenameList(updatedFilenames);
+      setImage(newImages);
+      console.log(updatedFilenames);
+      console.log("All images uploaded successfully!");
     } catch (error) {
-        console.error("Error uploading images:", error);
+      console.error("Error uploading images:", error);
     }
-};
-
+  };
 
   const dragPerson = useRef(0);
   const draggedOverperson = useRef(0);
@@ -121,9 +156,10 @@ const Baneradding = (Filename) => {
   const handleDragEnter = (index) => {
     draggedOverperson.current = index;
   };
-  const submitHandler =()=>{
+  const submitHandler = () => {
+    setSubmitButtonClicked(true);
     console.log(filenameList);
-  }
+  };
 
   return (
     <div className="bg-stone-50 sticky pb-5   top-0 p-2 mt-2   shadow border-slate-200z-30 w-full h-auto">
@@ -169,7 +205,13 @@ const Baneradding = (Filename) => {
           </>
         ))}
       </div>
-      <button className="p-2 bg-green-400 text-white ml-12 px-4 font-semibold mt-4 rounded-sm" onClick={submitHandler}> Submit</button>
+      <button
+        className="p-2 bg-green-400 text-white ml-12 px-4 font-semibold mt-4 rounded-sm"
+        onClick={submitHandler}
+      >
+        {" "}
+        Submit
+      </button>
     </div>
   );
 };
