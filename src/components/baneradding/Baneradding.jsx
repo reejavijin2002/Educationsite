@@ -21,11 +21,7 @@ const Baneradding = (Filename) => {
   const handleViewImage = async (e) => {
     const files = Array.from(e.target.files);
     const newImages = [...image, ...files];
-  
-    // Upload new images first
-  
-  
-    // Update the state with new images
+
     setImage(newImages);
     await handleUploadImages(files);
   };
@@ -46,14 +42,13 @@ const Baneradding = (Filename) => {
       const filename = filenameList[index];
       console.log(message, "0987654321");
 
-      // Pass values to ImageDelete
+    
       await ImageDelete(filename);
       console.log("Image deleted successfully!");
     } catch (error) {
       console.error("Error deleting image:", error);
     }
   };
-
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -86,7 +81,7 @@ const Baneradding = (Filename) => {
             uploadPromises.map((item) => item.promise)
         );
 
-        // Update state with the results
+      
         const updatedUploadStatuses = [...uploadStatusList];
         const updatedMessages = [...messageList];
         const updatedFilenames = [...filenameList];
@@ -126,6 +121,9 @@ const Baneradding = (Filename) => {
   const handleDragEnter = (index) => {
     draggedOverperson.current = index;
   };
+  const submitHandler =()=>{
+    console.log(filenameList);
+  }
 
   return (
     <div className="bg-stone-50 sticky pb-5   top-0 p-2 mt-2   shadow border-slate-200z-30 w-full h-auto">
@@ -171,6 +169,7 @@ const Baneradding = (Filename) => {
           </>
         ))}
       </div>
+      <button className="p-2 bg-green-400 text-white ml-12 px-4 font-semibold mt-4 rounded-sm" onClick={submitHandler}> Submit</button>
     </div>
   );
 };
