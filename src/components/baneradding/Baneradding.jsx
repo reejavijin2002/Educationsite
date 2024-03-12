@@ -15,27 +15,34 @@ const Baneradding = (Filename) => {
   const [filenameList, setFilenameList] = useState([]);
   const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
 
-
-
-
   useEffect(() => {
     const handleBeforeUnload = async () => {
       if (filenameList.length > 0 && !submitButtonClicked) {
         try {
-          for (const filename of filenameList) {
-            await ImageDelete(filename);
+          for (let i = 0; i < filenameList.length; i++) {
+            await ImageDelete(filenameList[i]);
           }
           console.log("Images deleted successfully before unload.");
+
+          setImage([]);
         } catch (error) {
           console.error("Error deleting images before unload:", error);
         }
       }
     };
 
+    const handleVisibilityChange = async () => {
+      if (document.visibilityState === "hidden") {
+        await handleBeforeUnload();
+      }
+    };
+
     window.addEventListener("beforeunload", handleBeforeUnload);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [filenameList, submitButtonClicked]);
 
@@ -79,6 +86,7 @@ const Baneradding = (Filename) => {
       const filename = filenameList[index];
 
       await ImageDelete(filename);
+
       console.log("Image deleted successfully!");
     } catch (error) {
       console.error("Error deleting image:", error);
@@ -106,7 +114,7 @@ const Baneradding = (Filename) => {
     try {
       const newImages = [...image, ...files];
       const uploadPromises = [];
-
+      setSubmitButtonClicked(false);
       for (let i = image.length; i < newImages.length; i++) {
         const img = newImages[i];
         const uploadPromise = BanerUpload(img, fileHandler);
