@@ -13,7 +13,7 @@ const ImageDelete = async (Filename,uploadStatus, message, filename) => {
                     "Content-Type": "application/json"
                 },
                 data: {
-                    fileNames: [Filename]
+                    fileNames: Filename
                 }
             }
         );

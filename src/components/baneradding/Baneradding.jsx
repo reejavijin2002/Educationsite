@@ -17,28 +17,30 @@ const Baneradding = (Filename) => {
 
   useEffect(() => {
     const handleBeforeUnload = async () => {
-      try {
-        for (let i = 0; i < filenameList.length; i++) {
-          await ImageDelete(filenameList[i]);
+      if (filenameList.length > 0 && !submitButtonClicked) {
+        try {
+         
+            await ImageDelete(filenameList);
+  
+          console.log("Images deleted successfully before unload.");
+          setFilenameList([]);
+          setImage([])
+      
+          console.log(filenameList,'file');
+        } catch (error) {
+          console.error("Error deleting images before unload:", error);
         }
-        console.log("Images deleted successfully before unload.");
-        setFilenameList([])
-        setImage([]); 
-      } catch (error) {
-        console.error("Error deleting images before unload:", error);
       }
     };
+    
+    
   
     const handleVisibilityChange = async () => {
-      if (document.visibilityState === "hidden") {
-        if(filenameList.length>0){
-          await handleBeforeUnload()
-        }
-      
+      if (document.visibilityState === "hidden" && filenameList.length > 0 && !submitButtonClicked) {
+        await handleBeforeUnload();
       }
     };
   
-    console.log(image.length, "list");
     window.addEventListener("beforeunload", handleBeforeUnload);
     document.addEventListener("visibilitychange", handleVisibilityChange);
   
@@ -46,7 +48,7 @@ const Baneradding = (Filename) => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [filenameList]);
+  }, [filenameList, submitButtonClicked]);
   
   
 
@@ -89,7 +91,7 @@ const Baneradding = (Filename) => {
 
       const filename = filenameList[index];
 
-      await ImageDelete(filename);
+      await ImageDelete([filename]);
 
       console.log("Image deleted successfully!");
     } catch (error) {
