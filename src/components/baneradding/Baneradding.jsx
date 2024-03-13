@@ -17,34 +17,38 @@ const Baneradding = (Filename) => {
 
   useEffect(() => {
     const handleBeforeUnload = async () => {
-      if (filenameList.length > 0 && !submitButtonClicked) {
-        try {
-          for (let i = 0; i < filenameList.length; i++) {
-            await ImageDelete(filenameList[i]);
-          }
-          console.log("Images deleted successfully before unload.");
-
-          setImage([]);
-        } catch (error) {
-          console.error("Error deleting images before unload:", error);
+      try {
+        for (let i = 0; i < filenameList.length; i++) {
+          await ImageDelete(filenameList[i]);
         }
+        console.log("Images deleted successfully before unload.");
+        setFilenameList([])
+        setImage([]); 
+      } catch (error) {
+        console.error("Error deleting images before unload:", error);
       }
     };
-
+  
     const handleVisibilityChange = async () => {
       if (document.visibilityState === "hidden") {
-        await handleBeforeUnload();
+        if(filenameList.length>0){
+          await handleBeforeUnload()
+        }
+      
       }
     };
-
+  
+    console.log(image.length, "list");
     window.addEventListener("beforeunload", handleBeforeUnload);
     document.addEventListener("visibilitychange", handleVisibilityChange);
-
+  
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [filenameList, submitButtonClicked]);
+  }, [filenameList]);
+  
+  
 
   const handleImageClick = () => {
     InputRef.current.click();
