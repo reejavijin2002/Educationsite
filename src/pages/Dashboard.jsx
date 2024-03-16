@@ -73,6 +73,7 @@ const Dashboard = () => {
             </span>
           </li>
           </Link>
+          <Link to='/dashboard/eventadding' className="no-underline">
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "Accounts" ? "activeListItem" : ""
@@ -85,6 +86,7 @@ const Dashboard = () => {
               Events
             </span>
           </li>
+          </Link>
           <li
             className="flex  rounded-md px-2 py-2 cursor-pointer hover:bg-green-400 hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white"
             onClick={toggleDropdown}
@@ -127,6 +129,8 @@ const Dashboard = () => {
               </li>
             </div>
           )}
+          <Link to='/dashboard/galleryadding' className="no-underline">
+
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "Search" ? "activeListItem" : ""
@@ -139,6 +143,9 @@ const Dashboard = () => {
               Gallery
             </span>
           </li>
+          </Link>
+          <Link to='/dashboard/blogadding' className="no-underline">
+
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "Analytics" ? "activeListItem" : ""
@@ -151,6 +158,9 @@ const Dashboard = () => {
               Blog
             </span>
           </li>
+          </Link>
+          <Link to='/dashboard/teamadding' className="no-underline">
+
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "File" ? "activeListItem" : ""
@@ -163,6 +173,9 @@ const Dashboard = () => {
               Our Team
             </span>
           </li>
+          </Link>
+          <Link to='/dashboard/testimonialadding' className="no-underline">
+
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "testimonial" ? "activeListItem" : ""
@@ -175,6 +188,9 @@ const Dashboard = () => {
               Testimonial
             </span>
           </li>
+          </Link>
+          <Link to='/dashboard/settings' className="no-underline">
+
           <li
             className={`flex  rounded-md px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-3 bg-light-white ${
               activeListItem === "Settings" ? "activeListItem" : ""
@@ -187,6 +203,7 @@ const Dashboard = () => {
               Setting
             </span>
           </li>
+          </Link>
         </ul>
         <img
           src={img1}

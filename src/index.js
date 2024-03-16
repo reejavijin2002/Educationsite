@@ -26,6 +26,12 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Dashfirst from "./components/dashfirst/Dashfirst";
 import Baneradding from "./components/baneradding/Baneradding";
+import Eventsadding from "./components/eventsadding/Eventsadding";
+import Galleryadding from "./components/galleryadding/Galleryadding";
+import Blogadding from "./components/blogadding/Blogadding";
+import Teamadding from "./components/teamadding/Teamadding";
+import Testimonialadding from "./components/testimonialadding/Testimonialadding";
+import Settings from "./components/settings/Settings";
 
 
 const Root = () => {
@@ -63,6 +69,16 @@ const Root = () => {
             <Route path="/dashboard" element={<Dashboard/>} >
               <Route path="" element={<Dashfirst/>}/>
               <Route path="baner" element={<Baneradding/>}/>
+              <Route path="eventadding" element={<Eventsadding/>}/>
+              <Route path="galleryadding" element={<Galleryadding/>}/>
+              <Route path="blogadding" element={<Blogadding/>}/>
+              <Route path="teamadding" element={<Teamadding/>}/>
+              <Route path="testimonialadding" element={<Testimonialadding/>}/>
+              <Route path="settings" element={<Settings/>}/>
+
+
+
+
             </Route>
 
 

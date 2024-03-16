@@ -14,43 +14,54 @@ const Baneradding = (Filename) => {
   const [messageList, setMessageList] = useState([]);
   const [filenameList, setFilenameList] = useState([]);
   const [submitButtonClicked, setSubmitButtonClicked] = useState(false);
+  const handleBeforeUnload = async () => {
+    if (filenameList.length > 0 && !submitButtonClicked) {
+      try {
+        await ImageDelete(filenameList);
+        console.log("Images deleted successfully before unload.");
+        setFilenameList([]);
+        setImage([]);
+      } catch (error) {
+        console.error("Error deleting images before unload:", error);
+      }
+    }
+  };
+
+  const hideContent = () => {
+    const hideElement = document.getElementById("hide");
+    if (!hideElement && !submitButtonClicked) {
+      handleBeforeUnload();
+
+      console.log("content is hide");
+    } else {
+      console.log("content is not hide");
+    }
+  };
 
   useEffect(() => {
-    const handleBeforeUnload = async () => {
-      if (filenameList.length > 0 && !submitButtonClicked) {
-        try {
-         
-            await ImageDelete(filenameList);
-  
-          console.log("Images deleted successfully before unload.");
-          setFilenameList([]);
-          setImage([])
-      
-          console.log(filenameList,'file');
-        } catch (error) {
-          console.error("Error deleting images before unload:", error);
-        }
-      }
-    };
-    
-    
-  
     const handleVisibilityChange = async () => {
-      if (document.visibilityState === "hidden" && filenameList.length > 0 && !submitButtonClicked) {
+      if (
+        document.visibilityState === "hidden" &&
+        filenameList.length > 0 &&
+        !submitButtonClicked
+      ) {
         await handleBeforeUnload();
       }
     };
-  
+
+    const unlisten = () => {
+      hideContent();
+    };
+
     window.addEventListener("beforeunload", handleBeforeUnload);
     document.addEventListener("visibilitychange", handleVisibilityChange);
-  
+
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+      unlisten();
     };
   }, [filenameList, submitButtonClicked]);
-  
-  
 
   const handleImageClick = () => {
     InputRef.current.click();
@@ -176,7 +187,10 @@ const Baneradding = (Filename) => {
   };
 
   return (
-    <div className="bg-stone-50 sticky pb-5   top-0 p-2 mt-2   shadow border-slate-200z-30 w-full h-auto">
+    <div
+      className="bg-stone-50 sticky pb-5   top-0 p-2 mt-2   shadow border-slate-200z-30 w-full h-auto"
+      id="hide"
+    >
       <h3 className="px-5 pt-5 pb-3 font-bold font-serif">Banner Image</h3>
       <div onDragOver={handleDragOver} onDrop={handleDrop}>
         <div
