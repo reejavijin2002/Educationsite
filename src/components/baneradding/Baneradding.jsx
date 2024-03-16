@@ -188,17 +188,17 @@ const Baneradding = (Filename) => {
 
   return (
     <div
-      className="bg-stone-50 sticky pb-5   top-0 p-2 mt-2   shadow border-slate-200z-30 w-full h-auto"
+      className="bg-stone-50 sticky pb-5   top-0 xs:p-1 md:p-2 mt-2   shadow border-slate-200z-30 w-full h-auto"
       id="hide"
     >
-      <h3 className="px-5 pt-5 pb-3 font-bold font-serif">Banner Image</h3>
+      <h3 className="xs:px-1 md:px-5 pt-5 pb-3 font-bold font-serif">Banner Image</h3>
       <div onDragOver={handleDragOver} onDrop={handleDrop}>
         <div
-          className="ml-auto mr-auto border-3  border-dotted border-black mx-5 cursor-pointer"
+          className="ml-auto mr-auto border-3  border-dotted border-black xs:mx-1 md:mx-5 cursor-pointer"
           onClick={handleImageClick}
         >
           <img src={img1} alt="" className="ml-auto mr-auto" />
-          <p className="text-center text-lg font-semibold">
+          <p className="text-center md:text-lg xs:text-base font-semibold">
             Drag & Drop some images here, Or Click here
           </p>
         </div>
@@ -217,7 +217,7 @@ const Baneradding = (Filename) => {
               key={index}
               src={URL.createObjectURL(image)}
               alt=""
-              className="w-1/4 h-36 ml-12 mt-4 flex rounded-lg border-2 border-gray-400"
+              className="md:w-1/4 xs:w-1/2 h-36 ml-12  mt-4 flex rounded-lg border-2 border-gray-400"
               draggable
               onDragStart={() => handleDragStart(index)}
               onDragEnter={() => handleDragEnter(index)}
@@ -234,7 +234,7 @@ const Baneradding = (Filename) => {
         ))}
       </div>
       <button
-        className="p-2 bg-green-400 text-white ml-12 px-4 font-semibold mt-4 rounded-sm"
+        className="p-2 bg-green-400 text-white md:mx-5 xs:mx-1 px-4 font-semibold mt-4 rounded-sm"
         onClick={submitHandler}
       >
         {" "}

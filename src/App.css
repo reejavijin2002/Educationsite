@@ -96,10 +96,10 @@
 
 @media (max-width:760px) {
     .seconddiv {
-        display: none;
+        width: 80%
     }
     .firstdiv {
-        width: 100%;
+        width: 20%;
     }
     .slidingicon {
         display: none;

@@ -54,7 +54,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img3} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"}  sm:invisible xs:invisible md:visible origin-left duration-200`}>
               Dashboard
             </span>
           </li>
@@ -68,7 +68,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img4} />
-            <span className={`${!open && "hidden"} origin-left no-underline duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible no-underline duration-200`}>
               Banner
             </span>
           </li>
@@ -82,7 +82,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img5} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} sm:invisible xs:invisible md:visible origin-left duration-200`}>
               Events
             </span>
           </li>
@@ -92,7 +92,7 @@ const Dashboard = () => {
             onClick={toggleDropdown}
           >
             <img src={img6} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} sm:invisible xs:invisible md:visible origin-left duration-200`}>
             Courses
             </span>
             <img src={img11} className="ml-auto" />
@@ -108,13 +108,13 @@ const Dashboard = () => {
                 {" "}
                 <img src={img12} />
                 <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
+                  className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}
                 >
                   Courses List
                 </span>
               </li>
               <li
-                className={`flex  rounded-md ml-4 px-2 py-2 hover:bg-green-400 transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-2 bg-light-white ${
+                className={`flex  rounded-md ml-4 px-2 py-2 hover:bg-green-400  transition cursor-pointer hover:bg-light-white text-white font-semibold text-sm items-center gap-x-4 mt-2 bg-light-white ${
                   activeListItem === "Date" ? "activeListItem" : ""
                 }`}
                 onClick={() => setActiveListItem("Date")}
@@ -122,7 +122,7 @@ const Dashboard = () => {
                 {" "}
                 <img src={img13} />
                 <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
+                  className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}
                 >
                   New Courses 
                 </span>
@@ -139,7 +139,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img7} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}>
               Gallery
             </span>
           </li>
@@ -154,7 +154,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img8} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}>
               Blog
             </span>
           </li>
@@ -169,7 +169,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img9} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}>
               Our Team
             </span>
           </li>
@@ -184,7 +184,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img14} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}>
               Testimonial
             </span>
           </li>
@@ -199,7 +199,7 @@ const Dashboard = () => {
           >
             {" "}
             <img src={img10} />
-            <span className={`${!open && "hidden"} origin-left duration-200`}>
+            <span className={`${!open && "hidden"} origin-left sm:invisible xs:invisible md:visible duration-200`}>
               Setting
             </span>
           </li>
@@ -213,7 +213,7 @@ const Dashboard = () => {
         />
       </div>
       <div className="h-screen flex-1 p-2 w-[80%] seconddiv ">
-        <header className="bg-stone-50 sticky   top-0 xs:invisible sm:visible  shadow border-slate-200z-30 ">
+        <header className="bg-stone-50 sticky   top-0 xs:visible sm:visible  shadow border-slate-200z-30 ">
           <div className="px-4 ">
             <div className="flex items-center justify-between h-16 ">
               <Link to="/">
@@ -238,14 +238,14 @@ const Dashboard = () => {
                         border: "0.2rem solid fuchsia",
                         width: "40px",
                         height: "40px",
-                        transition: "border-color 0.3s ease", // Adding transition for a smoother effect
+                        transition: "border-color 0.3s ease", 
                       }}
                       src={home}
                       onMouseOver={(e) => {
-                        e.target.style.borderColor = "transparent"; // Change border color to transparent on hover
+                        e.target.style.borderColor = "transparent"; 
                       }}
                       onMouseOut={(e) => {
-                        e.target.style.borderColor = "fuchsia"; // Change border color back to the original color on mouse out
+                        e.target.style.borderColor = "fuchsia"; 
                       }}
                     />
                   </Link>
